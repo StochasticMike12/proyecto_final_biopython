@@ -7,6 +7,4 @@ Etse repositorio ha sido creado específicamente para presentar el proyecto fina
 ### Miguel Ángel Flores Varela
 Estudiantes del tercer semestre de la Licenciatura en Ciencias Genómicas de la UNAM, generación 20.
 
-**Contacto:** 
-mfvarela@lcg.unam.mx
-camilav@lcg.unam.mx
+**Contacto:**  mfvarela@lcg.unam.mx, camilav@lcg.unam.mx
