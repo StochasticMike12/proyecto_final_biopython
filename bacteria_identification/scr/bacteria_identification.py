@@ -5,7 +5,7 @@ NAME
 
 VERSION
 
-    0.0.0
+    1.0.0
 
 AUTHORES
 
@@ -44,8 +44,8 @@ USAGE
 # Importar librerías necesarias.
 
 from Bio.Blast import NCBIXML
-from Bio import SeqIO
 import identifier as ident
+from Bio import SeqIO
 import argparse
 
 
@@ -71,15 +71,11 @@ parser.add_argument('Format',
 args = parser.parse_args()
 
 
-# ===========================================================================
-# =                            functions
-# ===========================================================================
-
-
 
 # ===========================================================================
 # =                            main
 # ===========================================================================
+
 # Abrir archivo de entrada. 
 try:
     # En caso de que el archivo de entrada sea fasta, se ejecuta funcion
@@ -98,4 +94,3 @@ try:
 # Mensaje de error en caso de no encontrar archivo
 except FileNotFoundError:
     print("No se encontró el archivo ingresado.")
-
