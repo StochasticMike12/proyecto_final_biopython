@@ -23,15 +23,69 @@ Identificar genero de especies mediante 16S o posibles especies nuevas.
 ## Resultados y pruebas
 
 Caso 1. Archivo de entrada fasta
-El programa se ejecuta ``
+El programa se ejecuta `py bacteria_identification.py ..\data\pJET16S-1-4_pJET1_2F.fasta fasta`
 
-El programa devuelve: 
+El programa devuelve: un archivo xml con el outut de BLAST, plotea los mejores hits de acuerdo al porcentaje de identidad y los imprime junto con el género al que puede pertenecer la secuencia. En concreto el mensaje es el siguiente:
+```
+> Los 5 mejores hits de acuerdo al porcentaje de identidad corresponden a los siguientes organismos:
 
+
+                       Organismo  Porcentaje de identidad
+0            Bacillus velezensis                99.566349
+1            Bacillus velezensis                99.566349
+2  Bacillus sp. (in: firmicutes)                99.480519
+3  Bacillus sp. (in: firmicutes)                99.480519
+4              Bacillus subtilis                99.480519
+
+> Géneros a los que puede corresponder tu secuencia:
+
+
+        - Bacillus
+```
 
 Caso 2. Archivo de entrada xml
-El programa se ejecuta ``
+El programa se ejecuta `py bacteria_identification.py ..\data\pJET16S-1-4_pJET1_2.xml xml`
 
-El programa devuelve:
+El programa devuelve: plotea los mejores hits de acuerdo al porcentaje de identidad y los imprime junto con el género al que puede pertenecer la secuencia. En concreto el mensaje es el siguiente:
+```
+> Secuencia 1 : H230705-030_O14_pJET16S-1-4_pJET1_2F.ab1
+
+> Los 5 mejores hits de acuerdo al porcentaje de identidad corresponden a los siguientes organismos:
+
+
+                       Organismo  Porcentaje de identidad
+0            Bacillus velezensis                99.566349
+1            Bacillus velezensis                99.566349
+2  Bacillus sp. (in: firmicutes)                99.480519
+3  Bacillus sp. (in: firmicutes)                99.480519
+4              Bacillus subtilis                99.480519
+
+> Géneros a los que puede corresponder tu secuencia:
+
+
+        - Bacillus
+
+
+> Secuencia 2 : H230705-030_M14_pJET16S-1-4_pJET1_2R.ab1
+
+> Los 5 mejores hits de acuerdo al porcentaje de identidad corresponden a los siguientes organismos:
+
+
+                    Organismo  Porcentaje de identidad
+0         Bacillus velezensis                99.176277
+1  Bacillus amyloliquefaciens                99.176277
+2         Bacillus velezensis                99.176277
+3         Bacillus velezensis                99.176277
+4         Bacillus velezensis                99.176277
+
+
+> Géneros a los que puede corresponder tu secuencia:
+
+
+        - Bacillus
+
+
+```
 
 
 ## Conclusión
