@@ -19,9 +19,9 @@ Identificar genero de especies mediante 16S o posibles especies nuevas.
 1. Usuario ingresa el archivo de secuencias 16S en formato fasta o archivo xml con resultados de BLAST, indicando el formato del archivo.
 2. Si el archivo está en formato fasta, el programa corre BLAST y el análisis de los resultados. En el caso contrario correrá únicamente el análisis de los resultados de BLAST.
 3. Al correr BLAST se obtienen los mejores hits de acuerdo a al expected value. 
-4. El análisis de los resultados de BLAST se realiza de acuerdo al porcentaje de identidad. Si ninguno de los hits posee un porcentaje de identidad es ayor a 99% se sugiere a la bacteria como una nueva especie.
+4. El análisis de los resultados de BLAST se realiza de acuerdo al porcentaje de identidad. Se obtienen los mejores 5 hits de acuerdo a este parámetro. Si ninguno de los hits posee un porcentaje de identidad es ayor a 99% se sugiere a la bacteria como una nueva especie.
 <img src="https://github.com/StochasticMike12/proyecto_final_biopython/blob/main/multimedia/Figure_3.png">
-5. Para saber a qué organismos que corresponden los mejores hits se extrae el accession de cada uno, posteriormente se realiza con efetch de la herramienta Entrez.
+6. Para saber a qué organismos que corresponden los mejores hits se extrae el accession de cada uno, posteriormente se realiza la consulta por medio de efetch de la herramienta Entrez.
 
 
 
