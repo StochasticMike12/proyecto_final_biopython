@@ -80,17 +80,22 @@ args = parser.parse_args()
 # ===========================================================================
 # =                            main
 # ===========================================================================
- 
+# Abrir archivo de entrada. 
 try:
+    # En caso de que el archivo de entrada sea fasta, se ejecuta funcion
+    # makeblast para correr BLAST
     if args.Format=='fasta':
         for record in SeqIO.parse(args.Path, "fasta"):
             ident.makeblast(record)
             file=record.id+'.xml'
+            # Correr analisis de datos despues de correr BLAST
             for blast_record in NCBIXML.parse(open(file)):
                 ident.identify(blast_record)
+    # Correr análisis de datos de archivos xml
     elif args.Format=='xml':
         for record in NCBIXML.parse(open(args.Path)):
             ident.identify(record)
+# Mensaje de error en caso de no encontrar archivo
 except FileNotFoundError:
     print("No se encontró el archivo ingresado.")
 
