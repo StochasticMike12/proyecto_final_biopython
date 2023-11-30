@@ -5,7 +5,7 @@ NAME
 
 VERSION
 
-    1.0.0
+    1.0.1
 
 AUTHORES
 
@@ -85,12 +85,16 @@ try:
             ident.makeblast(record)
             file=record.id+'.xml'
             # Correr analisis de datos despues de correr BLAST
+            n=1
             for blast_record in NCBIXML.parse(open(file)):
-                ident.identify(blast_record)
+                ident.identify(blast_record, n)
+                n+=1
     # Correr análisis de datos de archivos xml
     elif args.Format=='xml':
+        n=1
         for record in NCBIXML.parse(open(args.Path)):
-            ident.identify(record)
+            ident.identify(record, n)
+            n+=1
 # Mensaje de error en caso de no encontrar archivo
 except FileNotFoundError:
     print("No se encontró el archivo ingresado.")
