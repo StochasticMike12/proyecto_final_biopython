@@ -1,6 +1,6 @@
 # Bacteria Identification
 
-Camila Villazón Soto Innes
+Camila Villazón Soto Innes & 
 Miguel Ángel Flores Varela
 
 30/nov/2023
@@ -27,6 +27,9 @@ El programa se ejecuta `py bacteria_identification.py ..\data\pJET16S-1-4_pJET1_
 
 El programa devuelve: un archivo xml con el outut de BLAST, plotea los mejores hits de acuerdo al porcentaje de identidad y los imprime junto con el género al que puede pertenecer la secuencia. En concreto el mensaje es el siguiente:
 ```
+> Secuencia 1 : H230705-030_O14_pJET16S-1-4_pJET1_2F.ab1
+
+
 > Los 5 mejores hits de acuerdo al porcentaje de identidad corresponden a los siguientes organismos:
 
 
