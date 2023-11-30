@@ -18,11 +18,15 @@ Identificar genero de especies mediante 16S o posibles especies nuevas.
 ## Método
 1. Usuario ingresa el archivo de secuencias 16S en formato fasta o archivo xml con resultados de BLAST, indicando el formato del archivo.
 2. Si el archivo está en formato fasta, el programa corre BLAST y el análisis de los resultados. En el caso contrario correrá únicamente el análisis de los resultados de BLAST.
+3. El análisis de los resultados de BLAST se realiza de acuerdo al porcentaje de identidad. Si ninguno de los hits posee un porcentaje de identidad es ayor a 99% se sugiere a la bacteria como una nueva especie.
+<img src="https://github.com/StochasticMike12/proyecto_final_biopython/blob/main/multimedia/.png">
+
+
 
 
 ## Resultados y pruebas
 
-Caso 1. Archivo de entrada fasta
+### Caso 1. Archivo de entrada fasta
 El programa se ejecuta `py bacteria_identification.py ..\data\pJET16S-1-4_pJET1_2F.fasta fasta`
 
 El programa devuelve: un archivo xml con el outut de BLAST, plotea los mejores hits de acuerdo al porcentaje de identidad y los imprime junto con el género al que puede pertenecer la secuencia. En concreto el mensaje es el siguiente:
@@ -45,8 +49,9 @@ El programa devuelve: un archivo xml con el outut de BLAST, plotea los mejores h
 
         - Bacillus
 ```
+<img src="https://github.com/StochasticMike12/proyecto_final_biopython/blob/main/multimedia/Figure_1.png">
 
-Caso 2. Archivo de entrada xml
+### Caso 2. Archivo de entrada xml
 El programa se ejecuta `py bacteria_identification.py ..\data\pJET16S-1-4_pJET1_2.xml xml`
 
 El programa devuelve: plotea los mejores hits de acuerdo al porcentaje de identidad y los imprime junto con el género al que puede pertenecer la secuencia. En concreto el mensaje es el siguiente:
@@ -69,6 +74,11 @@ El programa devuelve: plotea los mejores hits de acuerdo al porcentaje de identi
         - Bacillus
 
 
+```
+<img src="https://github.com/StochasticMike12/proyecto_final_biopython/blob/main/multimedia/Figure_1.png">
+
+```
+
 > Secuencia 2 : H230705-030_M14_pJET16S-1-4_pJET1_2R.ab1
 
 > Los 5 mejores hits de acuerdo al porcentaje de identidad corresponden a los siguientes organismos:
@@ -89,7 +99,7 @@ El programa devuelve: plotea los mejores hits de acuerdo al porcentaje de identi
 
 
 ```
-
+<img src="https://github.com/StochasticMike12/proyecto_final_biopython/blob/main/multimedia/Figure_2.png">
 
 ## Conclusión
 Biopython es un set de herramientas que facilita el trabajo computacional en biología y el trabajo bioinformático. Con sus librerías especializadas en aplicaciones biológicas se puede eficientar las tareas bioinformáticas como buscar infomación en bases de datos, navegar un archivo o trabajar directamente con secuencias
