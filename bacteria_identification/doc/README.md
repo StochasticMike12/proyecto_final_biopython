@@ -20,7 +20,7 @@ Identificar genero de especies mediante 16S o posibles especies nuevas.
 2. Si el archivo está en formato fasta, el programa corre BLAST y el análisis de los resultados. En el caso contrario correrá únicamente el análisis de los resultados de BLAST.
 3. El análisis de los resultados de BLAST se realiza de acuerdo al porcentaje de identidad. Si ninguno de los hits posee un porcentaje de identidad es ayor a 99% se sugiere a la bacteria como una nueva especie.
 <img src="https://github.com/StochasticMike12/proyecto_final_biopython/blob/main/multimedia/Figure_3.png">
-
+4. Para consultar de los organismos a los que pertenecen los mejores hits se extrae el accession de cada se realiza con efetch de la herramienta Entrez.
 
 
 
